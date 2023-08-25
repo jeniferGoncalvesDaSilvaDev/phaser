@@ -3,7 +3,7 @@
 window.onload = function(){
     //criando um objeto para carregar as configuraçoes do jogo
     const config = {
-        type: Phaser.WebGL,
+        type: Phaser.CANVAS,
         width: 800,
         height: 600,
         backgroundColor: '#0000',
