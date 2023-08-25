@@ -5,13 +5,16 @@ class Scene01 extends Phaser.Scene{
         super('Scene01');
     }
     preload(){
-        this.load.image('background', 'assets/background.png');
+        //carregando dos assets do jogo
+        this.load.image('background', './img/ring-backgroung.png');
     }
     create(){
-        this.add.image(400, 300, 'background');
+        //configuraçoes das variaveis
+        //passando o background, salvando em uma variavel
+        this.ring=this.add.image(800, 600, 'background');
     }
     update(){
-        this.scene.start('Scene02');
+        //criar as regras do jogo
     }
-
+   
 }

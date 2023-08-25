@@ -3,15 +3,16 @@
 window.onload = function(){
     //criando um objeto para carregar as configuraçoes do jogo
     const config = {
-        type: Phaser.Canvas,
+        type: Phaser.WebGL,
         width: 800,
-        height: 800,
-        backgroundColor: '#000000',
+        height: 600,
+        backgroundColor: '#0000',
         //pasando as fases do jogo
-        scene:[scene01]
+        //scene:[scene01]
+        
         
     };
     //chamando o objeto para carregar as configuraçoes do jogo
-    let game = new Phaser.Game();
+    let game = new Phaser.Game(config);
      
 }
