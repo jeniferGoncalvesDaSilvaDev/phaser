@@ -1,18 +1,19 @@
-//carregando o jogo
-//phaser.game() eh uma classe no qual a variavel game vai instanciar
-window.onload = function(){
-    //criando um objeto para carregar as configuraçoes do jogo
-    const config = {
-        type: Phaser.CANVAS,
-        width: 800,
-        height: 600,
-        backgroundColor: '#0000',
-        //pasando as fases do jogo
-        //scene:[scene01]
-        
-        
-    };
-    //chamando o objeto para carregar as configuraçoes do jogo
-    let game = new Phaser.Game(config);
-     
+//importando as as classes
+
+import CenaCarregamento from '.src/cena-carregamento.js';
+import CenaJogo from './src/cena-jogo.js';
+const config={
+    type: Phaser.AUTO,
+    width: 800,
+    height: 800,
+    backgroundColor: '#000000',
+    //get element by id
+    parent: 'jogo luta de monstros',
+    scene:[
+        CenaCarregamento,
+        CenaJogo
+    ]
 }
+
+
+const game = new Phaser.Game(config);
